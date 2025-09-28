@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from flask_swagger_ui import get_swaggerui_blueprint
 from config import Config
 from extensions import db
+from flask_cors import CORS
 from routes.books import bp as books_bp
 from routes.characters import bp as chars_bp
 from routes.agendamentos import bp as ag_bp
@@ -13,6 +14,7 @@ def create_app():
     app = Flask(__name__, template_folder="templates", static_folder="static")
     app.config.from_object(Config)
     db.init_app(app)
+    CORS(app)
 
     # Swagger
     SWAGGER_URL = "/swagger"
