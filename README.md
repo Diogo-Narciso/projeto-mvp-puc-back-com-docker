@@ -1,4 +1,4 @@
-# 📚 MVP Backend Dostoiévski
+# 📚 MVP Backend
 
 Este projeto é um **MVP backend** desenvolvido em **Flask +
 SQLAlchemy**, containerizado com **Docker** e conectado a um banco
